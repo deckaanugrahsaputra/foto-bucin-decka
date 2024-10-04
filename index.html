@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Login Page</title>
+    <style>
+        body {
+
+            background-image: url('image/copy.jpg'); /* Ganti dengan nama file foto latar belakang */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .login-container {
+            max-width: 400px;
+            margin: auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        
+        <table>
+        <form onsubmit="handleLogin(event)">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" placeholder="Enter username" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Login</button>
+        </form>
+        <div class="text-center mt-3">
+            <a href="#">Forgot Password?</a>
+        </div>
+    </div>
+
+
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); // Mencegah reload halaman
+            // Simulasi login (Anda bisa menambahkan logika autentikasi di sini)
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            // Ganti dengan logika autentikasi nyata jika diperlukan
+            if (username === 'user' && password === 'pass') {
+                window.location.href = 'gallery.html'; // Redirect ke gallery.html
+            } else {
+                alert('Invalid credentials!');
+            }
+        }
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</table>
+</body>
+</html>
